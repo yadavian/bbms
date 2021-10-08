@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2019 at 01:05 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.1.31
+-- Generation Time: Mar 03, 2020 at 02:08 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -60,6 +60,13 @@ CREATE TABLE `donor` (
   `picture` text NOT NULL,
   `question` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `donor`
+--
+
+INSERT INTO `donor` (`did`, `email`, `password`, `phone`, `name`, `gender`, `blood`, `dob`, `city`, `state`, `picture`, `question`) VALUES
+(44, 'ankit.rama.yadav@gmail.com', '1234567', '09594371397', 'ANKIT RAMA YADAV', 'male', '', '0019-12-12', 'Mumbai', 'Maharashtra', 'donor/Screenshot (1).png', 'RAMA');
 
 -- --------------------------------------------------------
 
@@ -127,7 +134,7 @@ ALTER TABLE `seeker`
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `did` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `did` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `requests`
